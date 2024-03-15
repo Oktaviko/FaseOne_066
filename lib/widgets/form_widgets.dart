@@ -67,6 +67,14 @@ class _FormWidgetsState extends State<FormWidgets> {
               labelText: "Alamat",
               hintText: "Masukkan Alamat",
             ),
+            validator: (value) {
+              if (value!.isEmpty) {
+                return "Alamat tidak boleh kosong";
+              } else if (!RegExp(r'^[a-zA-Z]+$').hasMatch(value)) {
+                return "Hanya boleh memasukkan huruf";
+              }
+              return null;
+            },
           ),
         ],
       ),
