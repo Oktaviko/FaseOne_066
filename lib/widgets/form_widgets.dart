@@ -81,16 +81,25 @@ class _FormWidgetsState extends State<FormWidgets> {
           Row(
             children: [
               Radio<int>(
-                    value: 1,
-                    groupValue: selectedOption,
-                    onChanged: (value) {
-                      setState(() {
-                        selectedOption = value!;
-                      });
-                    },
-                  ),
-                  Text('P'),
-
+                value: 1,
+                groupValue: selectedOption,
+                onChanged: (value) {
+                  setState(() {
+                    selectedOption = value!;
+                  });
+                },
+              ),
+              Text('L'),
+              Radio<int>(
+                value: 1,
+                groupValue: selectedOption,
+                onChanged: (value) {
+                  setState(() {
+                    selectedOption = value!;
+                  });
+                },
+              ),
+              Text('P'),
             ],
           )
         ],
