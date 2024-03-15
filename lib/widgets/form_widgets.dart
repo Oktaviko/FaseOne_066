@@ -32,9 +32,9 @@ class _FormWidgetsState extends State<FormWidgets> {
             ),
             validator: (value) {
               if (value!.isEmpty) {
-                return "Masukkan nama dengan benar";
-              } else if (value.length < 6) {
-                return "Minimal 6 charcters";
+                return "Nama tidak boleh kosong";
+              } else if (!RegExp(r'^[a-zA-Z]+$').hasMatch(value)) {
+                return "Hanya boleh memasukkan huruf";
               }
               return null;
             },
