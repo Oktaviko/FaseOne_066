@@ -19,7 +19,11 @@ class HalamanTiga extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text("Nama : $nama")
+            Text("Nama : $nama"),
+            Text("No Telp : $nohp"),
+            Text("Makanan : $makanan"),
+            Text("Minuman : $minuman"),
+            Text("Desert : $desert"),
           ],
         ),
       ),
