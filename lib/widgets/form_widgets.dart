@@ -62,6 +62,7 @@ class _FormWidgetsState extends State<FormWidgets> {
             height: 25,
           ),
           TextFormField(
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             keyboardType: TextInputType.streetAddress,
             decoration: InputDecoration(
               labelText: "Alamat",
