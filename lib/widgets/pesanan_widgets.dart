@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Pesanan extends StatefulWidget {
-  const Pesanan({super.key});
+  const Pesanan({super.key, required this.formKey, required this.etMakanan, required this.etMinuman, required this.etDesert});
+
+  final GlobalKey<FormState> formKey;
+  final TextEditingController etMakanan;
+  final TextEditingController etMinuman;
+  final TextEditingController etDesert;
 
   @override
   State<Pesanan> createState() => _PesananState();
