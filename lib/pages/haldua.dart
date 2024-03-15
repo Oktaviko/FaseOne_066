@@ -11,6 +11,10 @@ class HalamanDua extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var makanan = TextEditingController();
+    var minuman = TextEditingController();
+    var desert = TextEditingController();
+    var formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -25,18 +29,28 @@ class HalamanDua extends StatelessWidget {
             children: [
               Text("Nama : $nama"),
               Text("No Telp : $nohp"),
-              Pesanan(),
+              Pesanan(
+                  formKey: formKey,
+                  etMakanan: makanan,
+                  etMinuman: minuman,
+                  etDesert: desert),
               const SizedBox(
                 height: 40,
               ),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => HalamanTiga(),
-                      ),
-                    );
+                    if (formKey.currentState!.validate()) {
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HalamanTiga(
+                                  makanan: makanan.text,
+                                  minuman: minuman.text,
+                                  desert: desert.text,
+                                  nama: nama,
+                                  nohp: nohp)),
+                          (route) => false);
+                    }
                   },
                   child: const Text(
                     "Next",
