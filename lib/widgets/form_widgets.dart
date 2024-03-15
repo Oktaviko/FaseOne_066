@@ -18,6 +18,7 @@ class FormWidgets extends StatefulWidget {
 class _FormWidgetsState extends State<FormWidgets> {
   @override
   Widget build(BuildContext context) {
+    int selectedOption = 1;
     return Form(
       key: widget.formKey,
       child: Column(
@@ -77,6 +78,21 @@ class _FormWidgetsState extends State<FormWidgets> {
               return null;
             },
           ),
+          Row(
+            children: [
+              Radio<int>(
+                    value: 1,
+                    groupValue: selectedOption,
+                    onChanged: (value) {
+                      setState(() {
+                        selectedOption = value!;
+                      });
+                    },
+                  ),
+                  Text('P'),
+
+            ],
+          )
         ],
       ),
     );
