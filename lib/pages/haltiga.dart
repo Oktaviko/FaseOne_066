@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class HalamanTiga extends StatelessWidget {
-  const HalamanTiga({super.key, required this.makanan, required this.minuman, required this.desert, required this.nama, required this.nohp});
+  const HalamanTiga(
+      {super.key,
+      required this.makanan,
+      required this.minuman,
+      required this.desert,
+      required this.nama,
+      required this.nohp});
 
   final String nama;
   final String nohp;
@@ -19,11 +25,29 @@ class HalamanTiga extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text("Nama : $nama"),
-            Text("No Telp : $nohp"),
-            Text("Makanan : $makanan"),
-            Text("Minuman : $minuman"),
-            Text("Desert : $desert"),
+            Text(
+              "Nama : $nama",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              "No Telp : $nohp",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              "Makanan : $makanan",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              "Minuman : $minuman",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              "Desert : $desert",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 50,
+            ),
           ],
         ),
       ),
