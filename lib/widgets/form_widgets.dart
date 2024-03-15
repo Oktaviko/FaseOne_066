@@ -79,7 +79,12 @@ class _FormWidgetsState extends State<FormWidgets> {
             },
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              Text(
+                "Jenis Kelamin : ",
+                style: TextStyle(fontSize: 15),
+              ),
               Radio<int>(
                 value: 1,
                 groupValue: selectedOption,
@@ -90,8 +95,11 @@ class _FormWidgetsState extends State<FormWidgets> {
                 },
               ),
               Text('L'),
+              SizedBox(
+                height: 30,
+              ),
               Radio<int>(
-                value: 1,
+                value: 2,
                 groupValue: selectedOption,
                 onChanged: (value) {
                   setState(() {
