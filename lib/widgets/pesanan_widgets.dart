@@ -13,37 +13,37 @@ class _PesananState extends State<Pesanan> {
     return Form(
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Makanan",
                 hintText: "Isi pesanan Makanan yang anda mau"
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Minuman",
                 hintText: "Isi pesanan Minuman yang anda mau"
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Desert",
                 hintText: "Isi pesanan Desert yang anda mau"
               ),

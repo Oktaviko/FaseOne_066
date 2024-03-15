@@ -9,12 +9,12 @@ class FooterWidgets extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 50,
         ),
         ElevatedButton(
           onPressed: onPressedNext,
-          child: Text(
+          child: const Text(
             "Next",
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),

@@ -44,6 +44,7 @@ class _FormWidgetsState extends State<FormWidgets> {
             height: 25,
           ),
           TextFormField(
+            controller: widget.etNohp,
             keyboardType: TextInputType.number,
             autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: InputDecoration(
@@ -79,7 +80,6 @@ class _FormWidgetsState extends State<FormWidgets> {
             },
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
                 "Jenis Kelamin : ",

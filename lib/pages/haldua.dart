@@ -13,7 +13,7 @@ class HalamanDua extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Data Makanan Warmindo",
         ),
       ),
@@ -26,7 +26,7 @@ class HalamanDua extends StatelessWidget {
               Text("Nama : $nama"),
               Text("No Telp : $nohp"),
               Pesanan(),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               ElevatedButton(
@@ -38,7 +38,7 @@ class HalamanDua extends StatelessWidget {
                       ),
                     );
                   },
-                  child: Text(
+                  child: const Text(
                     "Next",
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.bold),
