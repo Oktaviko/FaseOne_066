@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucp1/pages/halsatu.dart';
 
 class HalamanTiga extends StatelessWidget {
   const HalamanTiga(
@@ -48,6 +49,16 @@ class HalamanTiga extends StatelessWidget {
             SizedBox(
               height: 50,
             ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HalamanSatu()));
+                },
+                child: const Text(
+                  "Finish",
+                  style: TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                ))
           ],
         ),
       ),
