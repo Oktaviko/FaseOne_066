@@ -16,6 +16,7 @@ class _PesananState extends State<Pesanan> {
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: widget.formKey,
       child: Column(
         children: [
           const SizedBox(
@@ -24,6 +25,7 @@ class _PesananState extends State<Pesanan> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
+              controller: widget.etMakanan,
               decoration: const InputDecoration(
                 labelText: "Makanan",
                 hintText: "Isi pesanan Makanan yang anda mau"
@@ -36,6 +38,7 @@ class _PesananState extends State<Pesanan> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
+              controller: widget.etMinuman,
               decoration: const InputDecoration(
                 labelText: "Minuman",
                 hintText: "Isi pesanan Minuman yang anda mau"
@@ -48,6 +51,7 @@ class _PesananState extends State<Pesanan> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
+              controller: widget.etDesert,
               decoration: const InputDecoration(
                 labelText: "Desert",
                 hintText: "Isi pesanan Desert yang anda mau"
