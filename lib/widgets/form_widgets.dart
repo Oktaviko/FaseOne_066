@@ -30,32 +30,33 @@ class _FormWidgetsState extends State<FormWidgets> {
               labelText: "Nama",
               hintText: "Masukkan Nama",
             ),
-            validator: (value){
-            if (value!.isEmpty){
-              return "Masukkan nama dengan benar";
-            } else if (value.length < 6) {
-              return "Minimal 6 charcters";
-            }
-            return null;
-          },
+            validator: (value) {
+              if (value!.isEmpty) {
+                return "Masukkan nama dengan benar";
+              } else if (value.length < 6) {
+                return "Minimal 6 charcters";
+              }
+              return null;
+            },
           ),
           SizedBox(
             height: 25,
           ),
           TextFormField(
             keyboardType: TextInputType.number,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: InputDecoration(
               labelText: "No Telpon",
               hintText: "Masukkan Nomer Telepon",
             ),
-            validator: (value){
-            if (value!.isEmpty){
-              return "Masukkan no dengan benar";
-            } else if (value.length < 11) {
-              return "Minimal 11 charcters";
-            }
-            return null;
-          },
+            validator: (value) {
+              if (value!.isEmpty) {
+                return "Masukkan nomor telepon dengan benar";
+              } else if (!RegExp(r'^[0-9]+$').hasMatch(value)) {
+                return "Hanya boleh memasukkan angka";
+              }
+              return null;
+            },
           ),
           SizedBox(
             height: 25,
